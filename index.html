@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS 101: Unlock the Power of Styling</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="main-doc">
+      <nav id="navbar">
+        <header>
+          <div class="menu-header">
+            <h1>CSS 101</h1>
+          </div>
+          <ul>
+            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#css_selectors">CSS Selectors</a></li>
+            <li><a class="nav-link" href="#box_model">Box Model</a></li>
+            <li><a class="nav-link" href="#typography">Typography</a></li>
+            <li><a class="nav-link" href="#colors">Colors</a></li>
+            <li><a class="nav-link" href="#backgrounds">Backgrounds</a></li>
+            <li>
+              <a class="nav-link" href="#layout_and_positioning"
+                >Layout and Positioning
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#responsive_design"
+                >Responsive Design</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="#css_pseudo_classes"
+                >CSS Pseudo-classes</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="#css_transitions">CSS Transitions</a>
+            </li>
+            <li><a class="nav-link" href="#css_flexbox">CSS Flexbox</a></li>
+            <li><a class="nav-link" href="#css_grid">CSS Grid</a></li>
+            <li>
+              <a class="nav-link" href="#css_best_practices"
+                >CSS Best Practices</a
+              >
+            </li>
+            <li><a class="nav-link" href="#blog_tutorial">Blog Tutorial</a></li>
+            <li>
+              <a class="nav-link" href="#additional_resources"
+                >Additional Resources</a
+              >
+            </li>
+          </ul>
+        </header>
+      </nav>
+      <div class="main-content">
+        <section class="main-section" id="introduction">
+          <header class="section-title">Introduction</header>
+
+          <p>
+            Welcome to the CSS Basics tutorial, designed for beginners who want
+            to dive into the world of front-end development. Cascading Style
+            Sheets (CSS) is a fundamental technology that enables you to style
+            and format web documents. In this tutorial, we will cover the 12
+            most important concepts in CSS that every beginner should master.
+            Each concept will be explained with code examples, including both
+            CSS code and related HTML markup. By the end of this tutorial,
+            you'll have a solid foundation in CSS and be ready to create
+            visually appealing web pages. Let's get started!
+          </p>
+        </section>
+        <section class="main-section" id="css_selectors">
+          <header class="section-title">CSS Selectors</header>
+
+          <p>
+            CSS selectors are the backbone of CSS styling. They allow you to
+            target specific HTML elements and apply styles to them. Selectors
+            define the "what" of CSS. There are various types of selectors you
+            can use, such as element selectors, class selectors, ID selectors,
+            and attribute selectors. For example, an element selector targets
+            all instances of a particular HTML element, like
+            <code class="accent">&lt;p&gt;</code>.
+          </p>
+          <p>
+            Class selectors target elements with a specific class attribute,
+            denoted by a dot (e.g., <code class="accent">.highlight</code>). ID
+            selectors target a unique element with a specific ID attribute,
+            indicated by a hash symbol (e.g.,
+            <code class="accent">#my-id</code>). Attribute selectors target
+            elements based on their attribute values, allowing you to style
+            elements with specific attributes (e.g.,
+            <code class="accent">[type="text"]</code>). Understanding and
+            utilizing CSS selectors is essential for precisely targeting and
+            styling elements within your web pages.
+          </p>
+          <p class="code-header html-header">HTML Markup</p>
+          <pre class="language language-html">
+          &lt;p class="highlight"&gt;Hello, CSS!&lt;/p&gt;
+        </pre
+          >
+          <p class="code-header css-header">CSS Code</p>
+          <pre class="language language-css">
+            p {
+              color: blue;
+            }
+
+            .highlight {
+              background-color: yellow;
+            }
+        </pre
+          >
+        </section>
+        <section class="main-section" id="box_model">
+          <header class="section-title">Box Model</header>
+
+          <p>
+            The box model is a fundamental concept in CSS that defines the
+            layout and spacing of elements on a webpage. Each element is treated
+            as a rectangular box, comprising four layers: content, padding,
+            border, and margin. The content layer holds the actual content of
+            the element, such as text or images. The padding provides space
+            between the content and the element's border. The border surrounds
+            the element, separating it from other elements.
+          </p>
+          <p>
+            The margin is the space outside the element's border, creating a gap
+            between elements. By adjusting the dimensions and properties of each
+            layer, you can control the spacing and layout of elements on your
+            web page. For example, you can set the
+            <code class="accent">width</code> and
+            <code class="accent">height</code> of an element using the width and
+            height properties, add spacing around the content using the
+            <code class="accent">padding</code> property, define the border
+            using the <code class="accent">border</code> property, and create
+            space between elements using the
+            <code class="accent">margin</code> property. Understanding how the
+            box model works is crucial for creating well-structured and visually
+            appealing web layouts.
+          </p>
+          <p class="code-header html-header">HTML Markup</p>
+          <pre class="language language-html">
+          &lt;div class="box"&gt;Content&lt;/div&gt;
+        </pre
+          >
+          <p class="code-header css-header">CSS Code</p>
+          <pre class="language language-css">
+          .box {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 1px solid black;
+            margin: 10px;
+          }
+        </pre
+          >
+        </section>
+        <section class="main-section" id="typography">
+          <header class="section-title">Typography</header>
+
+          <p>
+            Typography refers to the styling of text on a webpage, including
+            font family, size, weight, and spacing. It plays a vital role in the
+            overall aesthetics and readability of your web page's content. CSS
+            provides a range of properties to control typography. The
+            <code class="accent">font-family</code> property allows you to
+            specify the typeface or font family for your text. You can choose
+            from a wide variety of fonts, including web-safe fonts and custom
+            fonts loaded from external sources. The
+            <code class="accent">font-size</code> property sets the size of the
+            text. You can define it using different units, such as pixels (px),
+            em, or percentages (%). The
+            <code class="accent">font-weight</code> property adjusts the
+            thickness or boldness of the text, offering options like normal,
+            bold, or numeric values. The
+            <code class="accent">line-height</code> property defines the
+            vertical spacing between lines of text. It affects the overall
+            readability and aesthetics of the text. By adjusting these
+            properties, you can create visually appealing and well-structured
+            text elements within your web page.
+          </p>
+          <p class="code-header html-header">HTML Markup</p>
+          <pre class="language language-html">
+          &lt;h1 class="title"&gt;Heading&lt;/h1&gt;
+        </pre
+          >
+          <p class="code-header css-header">CSS Code</p>
+          <pre class="language language-css">
+          .title {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.5;
+          }
+        </pre
+          >
+        </section>
+        <section class="main-section" id="colors">
+          <header class="section-title">Colors</header>
+
+          <p>
+            Colors play a significant role in web design, adding visual appeal
+            and conveying meaning. CSS provides various ways to specify colors.
+            You can use color keywords like <code class="accent">red</code>,
+            <code class="accent">blue</code>, or
+            <code class="accent">yellow</code> to set predefined colors.
+            Hexadecimal values, such as <code class="accent">#FF0000</code> for
+            red or <code class="accent">#0000FF</code> for blue, provide more
+            precise color control. RGB (Red, Green, Blue) values allow you to
+            define colors using numeric values ranging from 0 to 255 for each
+            color channel. For example,
+            <code class="accent">rgb(255, 0, 0)</code> represents red. HSL (Hue,
+            Saturation, Lightness) values provide another way to define colors.
+            Hue represents the color itself, saturation controls the intensity,
+            and lightness determines how light or dark the color appears. For
+            example, <code class="accent">hsl(0, 100%, 50%)</code> represents
+            pure red. CSS also allows you to specify opacity using RGBA and
+            HSLA, which include an additional alpha channel to control
+            transparency. For example,
+            <code class="accent">rgba(255, 0, 0, 0.5)</code> represents
+            semi-transparent red. By using these color properties, you can
+            effectively style various elements on your web page, creating
+            visually appealing designs that align with your brand or design
+            requirements.
+          </p>
+          <p class="code-header html-header">HTML Markup</p>
+          <pre class="language language-html">
+          &lt; p class="highlight"&gt;Hello, CSS!&lt; /p&gt;
+        </pre
+          >
+          <p class="code-header css-header">CSS Code</p>
+          <pre class="language language-css">
+          .highlight {
+            color: red;
+            background-color: #ffeecc;
+          }
+        </pre
+          >
+        </section>
+        <section class="main-section" id="backgrounds">
+          <header class="section-title">Backgrounds</header>
+
+          <p>
+            Backgrounds can significantly impact the visual presentation of your
+            web page. CSS provides properties to style backgrounds, including
+            background color, background images, and gradients. The
+            <code class="accent">background-color</code> property allows you to
+            set a solid color for the background. You can use color keywords,
+            hexadecimal values, RGB values, or HSL values to define the color.
+            For example,
+            <code class="accent">background-color: lightblue</code>; sets the
+            background color to light blue. In addition to solid colors, you can
+            also set background images using the
+            <code class="accent">background-image</code> property. This property
+            accepts the URL of the image file you want to use as the background.
+            For example,
+            <code class="accent">background-image: url('image.jpg')</code>; sets
+            the image.jpg file as the background image. CSS also provides
+            options to control how the background image is positioned, repeated,
+            and scaled. You can use the
+            <code class="accent">background-repeat</code> property to specify if
+            the image should repeat vertically, horizontally, or not at all. The
+            <code class="accent">background-position</code> property determines
+            the starting position of the background image. For example,
+            background-position: center top; positions the image at the center
+            horizontally and at the top vertically. To ensure the background
+            image covers the entire element, you can use the
+            <code class="accent">background-size</code> property. For instance,
+            <code class="accent">background-size: cover</code>; scales the image
+            proportionally to cover the entire background area. Besides solid
+            colors and images, CSS allows you to create gradients for
+            backgrounds. Gradients smoothly transition between two or more
+            colors. You can define linear gradients using the
+            <code class="accent">linear-gradient()</code> function or radial
+            gradients using the
+            <code class="accent">radial-gradient()</code> function. For example,
+            <code class="accent"
+              >background-image: linear-gradient(red, blue)</code
+            >; creates a linear gradient from red to blue. By combining these
+            background properties, you can create visually appealing and
+            engaging backgrounds for your web pages.
+          </p>
+          <p class="code-header html-header">HTML Markup</p>
+          <pre class="language language-html">
+          &lt;div class="bg-example"&gt;Background&lt;/div&gt;
+        </pre
+          >
+          <p class="code-header css-header">CSS Code</p>
+          <pre class="language language-css">
+          .bg-example {
+            background-color: lightblue;
+            background-image: url('image.jpg');
+            background-size: cover;
+          }
+        </pre
+          >
+        </section>
+        <section class="main-section" id="layout_and_positioning">
+          <header class="section-title">Layout and Positioning</header>
+
+          <p>
+            CSS provides properties like <code class="accent">display</code>,
+            <code class="accent">position</code>, and
+            <code class="accent">float</code> to control the layout and
+            positioning of elements on a web page. The
+            <code class="accent">display</code> property defines how an element
+            should be rendered. The default value is
+            <code class="accent">display: block;</code>, which means elements
+            are rendered as blocks and take up the full width available. Other
+            values include <code class="accent">display: inline;</code>, which
+            makes elements flow horizontally and only occupy the necessary
+            space, and <code class="accent">display: none;</code>, which hides
+            the element from the layout entirely. The
+            <code class="accent">position</code> property allows you to control
+            the positioning of an element on the page. The most commonly used
+            values are <code class="accent">position: static; (default)</code>,
+            which means the element follows the normal document flow,
+            <code class="accent">position: relative;</code>, which positions the
+            element relative to its normal position, and
+            <code class="accent">position: absolute;</code>, which positions the
+            element relative to its closest positioned ancestor or the document
+            itself. The <code class="accent">float</code> property is used to
+            float elements to the left or right, allowing other elements to wrap
+            around it. By combining these properties, you can create various
+            layout structures, such as multi-column layouts or sidebars.
+          </p>
+          <p class="code-header html-header">HTML Markup</p>
+          <pre class="language language-html">
+          &lt;div class="container"&gt; 
+            &lt;div class="sidebar">Sidebar&lt;/div&gt; 
+            &lt;div class="content">Content&lt;/div&gt; 
+          &lt;/div&gt; 
+        </pre
+          >
+          <p class="code-header css-header">CSS Code</p>
+          <pre class="language language-css">
+          .container {
+            display: flex;
+          }
+
+          .sidebar {
+            width: 200px;
+          }
+
+          .content {
+            flex-grow: 1;
+          }
+        </pre
+          >
+        </section>
+        <section class="main-section" id="responsive_design">
+          <header class="section-title">Responsive Design</header>
+
+          <p>
+            Responsive design is crucial for creating web pages that adapt to
+            different devices and screen sizes. CSS media queries allow you to
+            apply different styles based on the characteristics of the device or
+            screen. Media queries are written inside
+            <code class="accent">@media</code> rules and can specify conditions
+            like screen width, height, orientation, and resolution. For example,
+            <code class="accent">@media (max-width: 600px) { ... }</code>
+            targets screens with a maximum width of 600 pixels. Within the media
+            query, you can modify the styles of specific elements or introduce
+            layout changes. For instance, you can adjust font sizes, hide or
+            show certain elements, rearrange the layout, or apply different
+            styling rules. By utilizing media queries, you can create responsive
+            designs that provide optimal user experiences across various
+            devices, from desktop computers to mobile phones.
+          </p>
+          <p class="code-header html-header">HTML Markup</p>
+          <pre class="language language-html">
+          &lt;link rel="stylesheet" media="screen and (max-width: 600px)" href="mobile.css" &gt;
+        </pre
+          >
+          <p class="code-header css-header">CSS Code</p>
+          <pre class="language language-css">
+          body {
+            font-size: 14px;
+          }
+        </pre
+          >
+        </section>
+        <section class="main-section" id="css_pseudo_classes">
+          <header class="section-title">CSS Pseudo-classes</header>
+
+          <p>
+            Pseudo-classes in CSS allow you to select and style specific
+            elements based on their state or position in the document.
+            Pseudo-classes start with a colon (:) followed by the name of the
+            pseudo-class. For example, <code class="accent">:hover</code>,
+            <code class="accent">:active</code>, and
+            <code class="accent">:visited</code> are commonly used
+            pseudo-classes. The <code class="accent">:hover</code> pseudo-class
+            targets an element when the user hovers over it with the mouse
+            cursor. It allows you to apply different styles to create
+            interactive effects. For instance, you can change the background
+            color or add a hover effect to buttons or links. The
+            <code class="accent">:active</code> pseudo-class applies styles to
+            an element when it is being activated or clicked, such as pressing a
+            button or clicking a link. This pseudo-class is useful for adding
+            visual feedback to user interactions. The
+            <code class="accent">:visited</code> pseudo-class selects links that
+            have been visited by the user. You can use it to distinguish between
+            visited and unvisited links by applying different styles.
+            Additionally, CSS provides other pseudo-classes like
+            <code class="accent">:first-child</code>,
+            <code class="accent">:last-child</code>,
+            <code class="accent">:nth-child()</code>, and
+            <code class="accent">:focus</code>. These pseudo-classes allow you
+            to select elements based on their position in the document or their
+            focus state. By utilizing pseudo-classes, you can create interactive
+            and dynamic styles based on user actions or element positions.
+          </p>
+          <p class="code-header html-header">HTML Markup</p>
+          <pre class="language language-html">
+          &lt;button class="btn"&gt;Click Me&lt;/button&gt;
+        </pre
+          >
+          <p class="code-header css-header">CSS Code</p>
+          <pre class="language language-css">
+          .btn:hover {
+            background-color: lightgray;
+          }
+        </pre
+          >
+        </section>
+        <section class="main-section" id="css_transitions">
+          <header class="section-title">CSS Transitions</header>
+
+          <p>
+            CSS transitions enable you to create smooth animations when changing
+            property values over time. They add dynamic effects to elements,
+            enhancing the user experience. Transitions are defined using the
+            <code class="accent">transition</code> property, which accepts a
+            list of properties to be transitioned, the duration of the
+            transition, and the timing function that controls the acceleration
+            of the transition. For example,
+            <code class="accent">transition: width 1s ease-in-out</code>;
+            specifies that the width property should transition over a duration
+            of 1 second using an ease-in-out timing function. When a transition
+            is triggered, such as on hover or a class change, the specified
+            property will smoothly transition between its initial and final
+            values. You can apply transitions to various CSS properties, such as
+            width, height, color, opacity, and more. By combining transitions
+            with pseudo-classes or JavaScript event handlers, you can create
+            engaging animations and interactive effects on your web page.
+          </p>
+          <p class="code-header html-header">HTML Markup</p>
+          <pre class="language language-html">
+          &lt;div class="box"&gt;&lt;/div&gt;
+        </pre
+          >
+          <p class="code-header css-header">CSS Code</p>
+          <pre class="language language-css">
+          .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 1s ease-in-out;
+          }
+
+          .box:hover {
+            width: 200px;
+          }
+        </pre
+          >
+        </section>
+        <section class="main-section" id="css_flexbox">
+          <header class="section-title">CSS Flexbox</header>
+
+          <p>
+            Flexbox is a powerful layout model that simplifies the arrangement
+            of elements in a container. It provides flexible and responsive
+            designs. The flexbox layout consists of a parent container (flex
+            container) and the child elements (flex items) within it. By
+            applying the <code class="accent">display: flex;</code> property to
+            the parent container, you activate the flexbox behavior. Flex items
+            can be arranged in either a row or column, depending on the
+            <code class="accent">flex-direction</code> property, which can be
+            set to <code class="accent">row </code>(default) or
+            <code class="accent">column</code>. The
+            <code class="accent">justify-content</code> property controls the
+            alignment of flex items along the main axis, allowing you to
+            distribute them evenly or align them to the start or end. The
+            <code class="accent">align-items</code> property aligns flex items
+            along the cross axis, controlling their vertical positioning.
+            Flexbox also provides additional properties, such as
+            <code class="accent">flex-grow</code>,
+            <code class="accent">flex-shrink</code>, and
+            <code class="accent">flex-basis</code>, to control how flex items
+            grow, shrink, and size themselves within the container. By
+            leveraging these flexbox properties, you can create responsive
+            layouts that automatically adjust based on available space and
+            provide dynamic reordering of elements. Flexbox is widely supported
+            by modern browsers and is a valuable tool for creating flexible and
+            responsive designs.
+          </p>
+          <p class="code-header html-header">HTML Markup</p>
+          <pre class="language language-html">
+          &lt;div class="container"&gt;
+            &lt;div class="box">Box 1&lt;/div&gt;
+            &lt;div class="box">Box 2&lt;/div&gt;
+            &lt;div class="box">Box 3&lt;/div&gt;
+          &lt;/div&gt;
+        </pre
+          >
+          <p class="code-header css-header">CSS Code</p>
+          <pre class="language language-css">
+          .container {
+            display: flex;
+            justify-content: space-between;
+          }
+
+          .box {
+            flex: 1;
+          }
+        </pre
+          >
+        </section>
+        <section class="main-section" id="css_grid">
+          <header class="section-title">CSS Grid</header>
+
+          <p>
+            CSS Grid is a powerful layout system that allows you to create
+            complex two-dimensional layouts with rows and columns. It provides
+            precise control over the positioning and sizing of elements. Similar
+            to flexbox, the grid layout consists of a parent container (grid
+            container) and the child elements (grid items) within it. By
+            applying the <code class="accent">display: grid</code>; property to
+            the parent container, you activate the grid behavior. Grid items can
+            be placed in specific grid cells using the
+            <code class="accent">grid-row</code> and
+            <code class="accent">grid-column</code> properties or by specifying
+            the start and end positions using the
+            <code class="accent">grid-area</code> property. The
+            <code class="accent">grid-template-columns</code> and
+            <code class="accent">grid-template-rows</code> properties allow you
+            to define the size and number of columns and rows in the grid. You
+            can specify fixed sizes using pixels or percentages, or use the
+            <code class="accent">fr</code> unit to distribute available space
+            proportionally. CSS Grid also provides additional properties like
+            <code class="accent">grid-gap</code>,
+            <code class="accent">justify-items</code>, and
+            <code class="accent">align-items</code> to control the spacing,
+            alignment, and positioning of grid items. Grid offers powerful
+            features like grid templates, named grid lines, and the ability to
+            span items across multiple cells, enabling complex and responsive
+            layouts. By harnessing the power of CSS Grid, you can create
+            sophisticated and flexible designs that adapt to various screen
+            sizes and content structures.
+          </p>
+          <p class="code-header html-header">HTML Markup</p>
+          <pre class="language language-html">
+          &lt;div class="grid-container"&gt;
+            &lt;div class="item">Item 1&lt;/div&gt;
+            &lt;div class="item">Item 2&lt;/div&gt;
+            &lt;div class="item">Item 3&lt;/div&gt;
+          &lt;/div&gt;
+        </pre
+          >
+          <p class="code-header css-header">CSS Code</p>
+          <pre class="language language-css">
+          .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+          }
+
+          .item {
+            background-color: lightblue;
+            padding: 10px;
+            border: 1px solid black;
+          }
+        </pre
+          >
+        </section>
+        <section class="main-section" id="css_best_practices">
+          <header class="section-title">CSS Best Practices</header>
+
+          <p>
+            Adhering to best practices ensures clean and maintainable CSS code.
+            Following these practices improves code readability, reduces
+            conflicts, and enhances collaboration. Here are a few essential CSS
+            best practices to consider:
+          </p>
+          <ul>
+            <li>
+              Use meaningful class names: Choose descriptive class names that
+              convey the purpose or function of the element they style. This
+              makes your code more readable and understandable for yourself and
+              other developers.
+            </li>
+            <li>
+              Avoid excessive specificity: Don't use overly specific selectors
+              that can lead to conflicts and make your code difficult to
+              maintain. Prefer using classes and avoid inline styles whenever
+              possible.
+            </li>
+            <li>
+              Organize your stylesheets effectively: Group related styles
+              together, use comments to section your code, and consider using
+              modular approaches like SMACSS or BEM for larger projects.
+            </li>
+            <li>
+              Keep your stylesheets modular and reusable: Write styles that can
+              be reused across different elements and components. This helps
+              maintain consistency and reduces code duplication.
+            </li>
+            <li>
+              Optimize and minify your CSS: Before deploying your code to
+              production, minify your CSS to reduce file size and optimize
+              performance.
+            </li>
+            <li>
+              Stay up-to-date with CSS advancements: CSS evolves over time, so
+              it's essential to keep learning and exploring new features,
+              techniques, and best practices.
+            </li>
+          </ul>
+        </section>
+        <section class="main-section" id="blog_tutorial">
+          <header class="section-title">Blog Tutorial</header>
+
+          <p>
+            By following these best practices, you can create clean,
+            maintainable, and efficient CSS code that will benefit both you and
+            your fellow developers.
+          </p>
+          <p>
+            This tutorial provides a basic blog layout structure. The HTML code
+            defines a header containing a site title and navigation menu, a main
+            section with an article and an aside, and a footer. The CSS code
+            adds styles to achieve a visually appealing layout. The styles
+            include typography, colors, spacing, and alignment. You can
+            customize the styles further based on your preferences or design
+            requirements.
+          </p>
+          <p class="code-header html-header">HTML Markup</p>
+          <pre class="language language-html">
+           &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+          &lt;head&gt;
+            &lt;title&gt;My Blog&lt;/title&gt;
+            &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;header&gt;
+              &lt;h1&gt;My Blog&lt;/h1&gt;
+              &lt;nav&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/nav&gt;
+            &lt;/header&gt;
+            
+            &lt;main&gt;
+              &lt;article&gt;
+                &lt;h2&gt;My First Blog Post&lt;/h2&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend mauris at justo lobortis finibus.&lt;/p&gt;
+                &lt;p&gt;Donec interdum, orci sit amet tempor finibus, libero enim tempus urna, eu iaculis lacus neque et purus.&lt;/p&gt;
+              &lt;/article&gt;
+              
+              &lt;aside&gt;
+                &lt;h3&gt;About Me&lt;/h3&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend mauris at justo lobortis finibus.&lt;/p&gt;
+              &lt;/aside&gt;
+            &lt;/main&gt;
+            
+            &lt;footer&gt;
+              &lt;p&gt;&copy; 2023 My Blog. All rights reserved.&lt;/p&gt;
+            &lt;/footer&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </pre
+          >
+          <p class="code-header css-header">CSS Code</p>
+          <pre class="language language-css">
+          body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+          }
+
+          /* Global styles */
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333333;
+          }
+
+          header {
+            background-color: #333333;
+            padding: 20px;
+            color: #ffffff;
+          }
+
+          nav ul {
+            list-style-type: none;
+          }
+
+          nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+          }
+
+          nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+          }
+
+          main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+          }
+
+          article, aside {
+            margin-bottom: 20px;
+          }
+
+          article h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+
+          aside h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+
+          footer {
+            background-color: #333333;
+            padding: 20px;
+            color: #ffffff;
+            text-align: center;
+          }
+        </pre
+          >
+        </section>
+        <section class="main-section" id="additional_resources">
+          <header class="section-title">Additional Resources</header>
+
+          <ul>
+            <li>
+              Mozilla Developer Network (MDN) CSS Documentation:
+              <a
+                class="link-reference"
+                href=" https://developer.mozilla.org/en-US/docs/Web/CSS"
+                target="_blank"
+                >https://developer.mozilla.org/en-US/docs/Web/CSS</a
+              >
+            </li>
+            <li>
+              CSS-Tricks:
+              <a
+                class="link-reference"
+                href=" https://css-tricks.com/"
+                target="_blank"
+                >https://css-tricks.com/</a
+              >
+            </li>
+            <li>
+              W3Schools CSS Tutorial:
+              <a
+                class="link-reference"
+                href="https://www.w3schools.com/css/"
+                target="_blank"
+                >https://www.w3schools.com/css/</a
+              >
+            </li>
+            <li>
+              FreeCodeCamp CSS Tutorial:
+              <a
+                class="link-reference"
+                href="https://www.freecodecamp.org/learn/responsive-web-design/basic-css/"
+                target="_blank"
+                >https://www.freecodecamp.org/learn/responsive-web-design/basic-css/</a
+              >
+            </li>
+            <li>
+              Codecademy CSS Course:
+              <a
+                class="link-reference"
+                href="https://www.codecademy.com/learn/learn-css"
+                target="_blank"
+                >https://www.codecademy.com/learn/learn-css</a
+              >
+            </li>
+            <li>"CSS Secrets" by Lea Verou (Book)</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
